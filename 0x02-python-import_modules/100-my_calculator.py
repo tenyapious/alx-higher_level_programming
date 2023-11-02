@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
-    from calculator_1 import add, sub, mul, div
+    import calculator_1
 
     argv_len = len(argv) - 1
     return_val = 0
@@ -14,13 +14,13 @@ if __name__ == "__main__":
 
     match argv[2]:
         case "+":
-            print("{} + {} = {}".format(a, b, add(a, b)))
+            print("{} + {} = {}".format(a, b, calculator_1.add(a, b)))
         case "-":
-            print("{} - {} = {}".format(a, b, sub(a, b)))
+            print("{} - {} = {}".format(a, b, calculator_1.sub(a, b)))
         case "*":
-             print("{} * {} = {}".format(a, b, mul(a, b)))
+             print("{} * {} = {}".format(a, b, calculator_1.mul(a, b)))
         case "/":
-            print("{} / {} = {}".format(a, b, div(a, b)))
+            print("{} / {} = {}".format(a, b, calculator_1.div(a, b)))
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
