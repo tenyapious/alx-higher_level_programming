@@ -19,7 +19,7 @@ if __name__ == "__main__":
         case "-":
             print("{} {} {} = {}".format(a, op, b, sub(a, b)))
         case "*":
-             print("{} {} {} = {}".format(a, op, b, mul(a, b)))
+            print("{} {} {} = {}".format(a, op, b, mul(a, b)))
         case "/":
             print("{} {} {} = {}".format(a, op, b, div(a, b)))
         case _:
