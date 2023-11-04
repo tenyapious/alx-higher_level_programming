@@ -13,7 +13,7 @@ if __name__ == "__main__":
     b = int(argv[3])
     op = argv[2]
 
-    match argv[2]:
+    match op:
         case "+":
             print("{} {} {} = {}".format(a, op, b, add(a, b)))
         case "-":
