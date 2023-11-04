@@ -2,7 +2,7 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     ta_len = len(tuple_a)
     tb_len = len(tuple_b)
-    
+
     if ta_len < 2:
         a_2 = 0
     else:
