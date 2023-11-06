@@ -3,57 +3,45 @@
 #include "lists.h"
 
 /**
- * dup_list - duplate a linked list
+ * list_len - get length of listint_t list
  * @head: pointer of first node of listint_t list
  *
- * Return: address of new list
+ * Return: length of listint_t list
 */
-listint_t *dup_list(listint_t *head)
+int list_len(listint_t *head)
 {
-	listint_t *new_list, *temp;
+	listint_t *temp;
+	int len = 0;
 
-	new_list = NULL;
 	temp = head;
 
 	while (temp != NULL)
 	{
-		add_nodeint_end(&new_list, temp->n);
+		len++;
 		temp = temp->next;
 	}
 
-	return (new_list);
+	return (len);
 }
 
 /**
- * reverse_list - reverse a linked list
+ * nnode_val - get value of a node at a position
  * @head: pointer of first node of listint_t list
+ * @n: position of node
  *
- * Return: address of the linked list
+ * Return: value of the node
 */
-listint_t *reverse_list(listint_t *head)
+int nnode_val(listint_t *head, int n)
 {
-	listint_t *next_node, *temp;
+	listint_t *temp;
 
-	if (head == NULL)
-		return (NULL);
-	else if (head->next == NULL)
-		return (head);
-
-	next_node = head->next;
-	temp = next_node->next;
-	head->next = NULL;
-	next_node->next = head;
-	head = next_node;
-
-	while (temp != NULL)
+	temp = head;
+	while (--n)
 	{
-		next_node = temp;
-		temp = next_node->next;
-		next_node->next = head;
-		head = next_node;
+		temp = temp->next;
 	}
 
-	return (head);
+	return (temp->n);
 }
 
 /**
@@ -64,26 +52,17 @@ listint_t *reverse_list(listint_t *head)
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *h, *temp1, *temp2;
-	int is_pal = 1;
+	int len, halflen, i, j;
 
-	h = dup_list(*head);
-	h = reverse_list(h);
+	len = list_len(*head);
+	halflen = len / 2;
 
-	temp1 = *head;
-	temp2 = h;
 
-	while (temp1 != NULL)
+	for (i = 1, j = len ; i <= halflen; i++, j--)
 	{
-		if (temp1->n != temp2->n)
-		{
-			is_pal = 0;
-			break;
-		}
-		temp1 = temp1->next;
-		temp2 = temp2->next;
+		if (nnode_val(*head, i) != nnode_val(*head, j))
+			return (0);
 	}
 
-	free_listint(h);
-	return (is_pal);
+	return (1);
 }
