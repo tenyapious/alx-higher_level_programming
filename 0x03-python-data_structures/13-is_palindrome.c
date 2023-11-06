@@ -54,9 +54,11 @@ int is_palindrome(listint_t **head)
 {
 	int len, halflen, i, j;
 
+	if (*head == NULL)
+		return (1);
+
 	len = list_len(*head);
 	halflen = len / 2;
-
 
 	for (i = 1, j = len ; i <= halflen; i++, j--)
 	{
