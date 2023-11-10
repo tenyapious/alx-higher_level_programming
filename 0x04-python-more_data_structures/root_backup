@@ -1,0 +1,41 @@
+" Enable line numbers ->optional but helpful<-
+set number
+
+" Use spaces for indentation ->4 spaces per level<-
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" Enable auto-indentation
+set autoindent
+set smartindent
+set cindent
+
+" Enable syntax-based indentation ->recommended for programming<-
+filetype plugin indent on
+
+" Enable line wrapping
+set wrap
+
+" Display matching brackets/parentheses
+set showmatch
+
+" Highlight current line
+" set cursorline
+
+" Highlight search results as you type
+set incsearch
+set hlsearch
+
+" Enable folding ->optional<-
+set foldmethod=indent
+set foldlevelstart=99
+
+" Enable line numbers for the left gutter ->optional, requires Vim 7.3+<-
+" set number
+
+" Enable syntax highlighting ->recommended for code files<-
+syntax enable
+
+set laststatus=2
+set ruler
