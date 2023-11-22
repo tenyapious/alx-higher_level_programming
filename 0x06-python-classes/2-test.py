@@ -2,17 +2,17 @@
 
 class P:
     def __init__(self, x):
-        self.x = x
+        self.__x = x
 
     @property
-    def xx(self):
-        return self.__x
+    def x(self):
+        return self.__x + 10
 
-    @xx.setter
-    def xx(self, x):
+    @x.setter
+    def x(self, x):
         if x > 20:
             print("it's too big")
-            self.__x = x
+            self.__x = 20 
         else:
             self.__x = x
 
