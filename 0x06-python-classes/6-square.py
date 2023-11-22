@@ -50,9 +50,12 @@ class Square:
         self.__position = value
 
     def area(self):
+        """ Returns:
+                The area of the square """
         return self.size * self.size
 
     def my_print(self):
+        """ Prints # in place of the the size of the square """
         if self.size > 0:
             for i in range(self.position[1]):
                 print("")
