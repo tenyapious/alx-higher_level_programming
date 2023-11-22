@@ -57,12 +57,12 @@ class Square:
     def my_print(self):
         """ Prints # in place of the the size of the square """
         if self.size > 0:
-            for i in range(self.position[1]):
+            for i in range(0, self.position[1]):
                 print("")
-            for i in range(self.size):
-                for k in range(self.position[0]):
+            for i in range(0, self.size):
+                for k in range(0, self.position[0]):
                     print(" ", end="")
-                for j in range(self.size):
+                for j in range(0, self.size):
                     print("#", end="")
                 print("")
         else:
