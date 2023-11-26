@@ -12,11 +12,11 @@ def add_integer(a, b=98):
         b: The second integer or float. Defaults to 98.
 
     Returns:
-        The result of adding a and b
+        The result of adding `a` and `b`
 
     Raises:
-        TypeError: If a is neither an integer nor float.
-            If b is neither an integer nor float.
+        TypeError: If `a` is neither an integer nor float.
+            If `b` is neither an integer nor float.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
