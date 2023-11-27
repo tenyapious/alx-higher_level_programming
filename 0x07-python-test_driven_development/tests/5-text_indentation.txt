@@ -43,6 +43,30 @@ First import function ``text_indentation`` from ``5-text_indentation`` module:
 	a .
 	<BLANKLINE>
 
+	>>> text_indentation("..? a . ")
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	a .
+	<BLANKLINE>
+
+	>>> text_indentation("..? a .:: ")
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	a .
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
 	>>> text_indentation("abde")
 	abde
 
