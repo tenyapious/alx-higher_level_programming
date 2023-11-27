@@ -1,0 +1,69 @@
+The module ``5-text_indentation``
+=================================
+
+Using text_indentation
+----------------------
+First import function ``text_indentation`` from ``5-text_indentation`` module:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+	>>> text_indentation((1,2))
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+	>>> text_indentation(".")
+	.
+	<BLANKLINE>
+
+	>>> text_indentation(" .")
+	.
+	<BLANKLINE>
+
+	>>> text_indentation("  . ") 
+	.
+	<BLANKLINE>
+
+	>>> text_indentation("a.")
+	a.
+	<BLANKLINE>
+	
+	>>> text_indentation("a. ")
+	a.
+	<BLANKLINE>
+
+	>>> text_indentation(" a.")
+	a.
+	<BLANKLINE>
+
+	>>> text_indentation(" a. ")
+	a.
+	<BLANKLINE>
+	
+	>>> text_indentation(" a . ")
+	a .
+	<BLANKLINE>
+
+	>>> text_indentation("abde")
+	abde
+
+	>>> text_indentation("  abde")
+	abde
+
+	>>> text_indentation("  abde   ")
+	abde
+
+	>>> text_indentation(" a: bd ")
+	a:
+	<BLANKLINE>
+	bd
+
+	>>> text_indentation("  a : bd.  ef  ")
+	a :
+	<BLANKLINE>
+	bd.
+	<BLANKLINE>
+	ef
+
+	>>> text_indentation("abcd?")
+	abcd?
+	<BLANKLINE>
