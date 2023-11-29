@@ -16,14 +16,15 @@ def matrix_divided(matrix, div):
         list: a new list if successful
 
     Raises:
-        TypeError: If `matrix` is not a list of lists
-            If outer list of `matrix` is empty
-            If an inner list of `matrix` is empty
-            If inner lists of `matrix` are not the same sizes
-            If an element of a list is not an integer or float
-            If `div` is not an integer or float
-
-        ZeroDivisionError: If `div` is 0
+        TypeError: If `matrix` is not a list of lists.
+            If outer list of `matrix` is empty.
+            If an inner list of `matrix` is empty.
+            If inner lists of `matrix` are not the same sizes.
+            If an element of a list is not an integer or float.
+            If `div` is not an integer or float.
+            If only one argument is supplied.
+            If no argument is supplied.
+        ZeroDivisionError: If `div` is 0.
     """
 
     if not isinstance(matrix, list):
