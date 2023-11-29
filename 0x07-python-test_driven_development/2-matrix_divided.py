@@ -53,8 +53,8 @@ def matrix_divided(matrix, div):
                 new_row.append(round((ele / div), 2))
             else:
                 raise TypeError(
-                    "matrix must be a matrix (list of lists)" + 
-                        " of integers/floats")
+                    "matrix must be a matrix (list of lists)" +
+                    " of integers/floats")
         if len(new_row) == 0:
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats")
