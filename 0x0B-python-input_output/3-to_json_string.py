@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import json
-
 """ Defines to_json_string function """
+import json
 
 
 def to_json_string(my_obj):
@@ -14,5 +13,4 @@ def to_json_string(my_obj):
     Return:
         str: The JSON representation of ``my_obj``.
     """
-
     return json.dumps(my_obj)
