@@ -36,3 +36,18 @@ class TestRectangle(unittest.TestCase):
 
         r5 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r5), '[Rectangle] (12) 2/1 - 4/6')
+
+        r5.update(89)
+        self.assertEqual(str(r5), '[Rectangle] (89) 2/1 - 4/6')
+
+        r5.update(89, 2)
+        self.assertEqual(str(r5), '[Rectangle] (89) 2/1 - 2/6')
+
+        r5.update(89, 2, 3)
+        self.assertEqual(str(r5), '[Rectangle] (89) 2/1 - 2/3')
+
+        r5.update(89, 2, 3, 4)
+        self.assertEqual(str(r5), '[Rectangle] (89) 4/1 - 2/3')
+
+        r5.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(r5), '[Rectangle] (89) 4/5 - 2/3')
