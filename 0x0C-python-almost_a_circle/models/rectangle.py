@@ -94,6 +94,7 @@ class Rectangle(Base):
 - {self.width}/{self.height}"
 
     def update(self, *args):
+        """ Update the values of the rectangle """
         if len(args) >= 5:
             self.y = args[4]
         if len(args) >= 4:
