@@ -51,3 +51,21 @@ class TestRectangle(unittest.TestCase):
 
         r5.update(89, 2, 3, 4, 5)
         self.assertEqual(str(r5), '[Rectangle] (89) 4/5 - 2/3')
+
+    def test_task9(self):
+        """ Run test for task 9 """
+
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r1), '[Rectangle] (12) 2/1 - 4/6')
+
+        r1.update(height=1)
+        self.assertEqual(str(r1), '[Rectangle] (12) 2/1 - 4/1')
+
+        r1.update(width=1, x=2)
+        self.assertEqual(str(r1), '[Rectangle] (12) 2/1 - 1/1')
+
+        r1.update(y=1, width=2, x=3, id=8)
+        self.assertEqual(str(r1), '[Rectangle] (8) 3/1 - 2/1')
+
+        r1.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(str(r1), '[Rectangle] (8) 1/3 - 4/2')
