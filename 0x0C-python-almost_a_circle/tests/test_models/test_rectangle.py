@@ -15,5 +15,5 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 2)
         self.assertEqual(r2.width, 2)
 
-        r3. Rectangle(2, 2)
-        self.assertEqual(r2.area, 4)
+        r3 = Rectangle(3, 2)
+        self.assertEqual(r3.area(), 6)
