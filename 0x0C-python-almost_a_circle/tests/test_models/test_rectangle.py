@@ -74,3 +74,10 @@ class TestRectangle(unittest.TestCase):
     def test_task10(self):
         s1 = Square(5)
         self.assertEqual(str(s1), '[Square] (7) 0/0 - 5')
+
+    def test_task13(self):
+        r1 = Rectangle(10, 2, 1, 9, 1)
+        self.assertEqual(str(r1), '[Rectangle] (1) 1/9 - 10/2')
+
+        r1_dict = r1.to_dictionary()
+        self.assertEqual(str(r1_dict), "{'_Rectangle__width': 10, '_Rectangle__height': 2, '_Rectangle__x': 1, '_Rectangle__y': 9, 'id': 1}")
