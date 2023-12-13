@@ -26,6 +26,12 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
+        """ Update square values
+
+        args:
+            args: list of arguments
+            kwargs: list of kew-worded arguments
+        """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
