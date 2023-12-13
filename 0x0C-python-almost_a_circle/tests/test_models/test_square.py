@@ -23,7 +23,7 @@ class TestSquare(unittest.TestCase):
     def test_task12(self):
         s1 = Square(5)
         self.assertEqual(str(s1), '[Square] (10) 0/0 - 5')
-        
+
         s1.update(20)
         self.assertEqual(str(s1), '[Square] (20) 0/0 - 5')
 
