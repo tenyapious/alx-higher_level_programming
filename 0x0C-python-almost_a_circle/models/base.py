@@ -71,6 +71,8 @@ class Base:
             if cls.__name__ == "Rectangle":
                 inst = cls(1, 2)
             else:
-                inst = cls(1)
+                inst = cls(1, 2)
 
-            return inst.update(**dictionary)
+            inst.update(**dictionary)
+
+            return inst
